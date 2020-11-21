@@ -1,0 +1,31 @@
+---
+title: "Exploring Race in Prisons"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r include = FALSE}
+source("analysis.R")
+```
+
+### Introduction {#Introduction}
+The criminal justice system of America is no stranger to scrutiny. Plagued with detrimental biases within its computer systems and people, we are all too familiar with the topic of race and prison. Using the VERA institute's dataset, I have chosen to focus on **prison** statistics at the state and county level, analyzing **race** factors. Specifically, the variables I mainly focused on were: `_prison_pop`, `_prison_adm_rate`, and `prison_pop_rate`. I focused on California and New York for my plots. 
+
+### Summary Information {#Summary-Information}
+Here are some quick summary facts I've extracted from my analysis: 
+- Cali saw the highest number of Black prison population in **2008**, at 49464 people
+- The highest recorded number of Black prison population in a county was New York County, at 24818 people
+- The year of the most 
+- The highest black to white proportion in 2016 was at an estimated 1915% ! 
+- The state with the highest ever Black to white proportion was in New Jersey 
+
+### Table Findings {#Table-Findings}
+Below is a unemployment table with features that reflect questions that we are trying to answer. Specifically, since we are primarily interested in the on the impact COVID had on American with different demographics, there are columns of sex, race and education. The table shows the max unemployment rate of each year. We sorted the data in descending year order so it is easy to compare 2020 with previous years. As you can see, the unemployment rates of 2020 is significantly higher than the previous years. Even compared to the regression in 2008, 2020 unemployment is significantly higher
+
+
+```{r echo = FALSE}
+# Put the variable name for your chart below this line. (the file is sourced, so just having the variable will display the chart.)
+Unemployment_summary %>%
+  filter(Year > 2016 | Year > 2007 & Year < 2012)
+```
