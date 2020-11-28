@@ -10,21 +10,36 @@ source("analysis.R")
 ```
 
 ### Introduction 
-The criminal justice system of America is no stranger to scrutiny. Plagued with detrimental biases within its computer systems and people, we are all too familiar with the topic of race and prison. Using the VERA institute's dataset, I have chosen to focus on **prison** statistics at the state and county level, analyzing **race** factors. Specifically, the variables I mainly focused on were: `_prison_pop`, `_prison_adm_rate`, and `prison_pop_rate`. I focused on California and New York for my plots. 
+The criminal justice system of America is no stranger to scrutiny. Plagued with detrimental biases within its computer systems and people, we are all too familiar with the topic of race and prison. Using the VERA institute's dataset, I have chosen to focus on **prison** statistics at the state and county level, analyzing **race** factors. Specifically, the variables I mainly focused on were: `_prison_pop`, `_prison_adm_rate`, and `prison_pop_rate`. 
 
 ### Summary Information 
 Here are some quick summary facts I've extracted from my analysis: 
 - Cali saw the highest number of Black prison population in **2008**, at 49464 people
 - The highest recorded number of Black prison population in a county was New York County, at 24818 people
-- The year of the most 
+- In 2016, 4 states had White prison admission rates of 0, where as the Black prison admission rates were above 90
 - The highest black to white proportion in 2016 was at an estimated 1915% ! 
 - The state with the highest ever Black to white proportion was in New Jersey 
 
 ### Trends over Time Chart 
 Though my focus was on the Black prison population, I decided to also map out the varying races. 
-The plot is divided by 2 different states: California and New York. Then, the prison population is compared for the different groups of race, over years. I wanted to see 
+The plot is divided by 2 different states: California and New York. Then, the prison population is compared for the different groups of race, over years. I wanted to see any trends over the past decade in prison population. The plot reveals that the Latinx, Black, and White race has the highest population in both California and New York prisons. Additionally, the Latinx population over time has continued to be significantly higher than the rest in California. In New York, the Black population over time is also significantly higher than the rest. Though the trend suggests decreasing total prison population, the racial disparities still exist. 
 
 ```{r echo = FALSE, warning=FALSE}
 prison_year_pop_plot
+```
+
+### 2 Variable Chart
+For this chart I wanted to explore the relationship between the Black prison admission rate and Black prison population rate in 2016 among various states. In this visual, I found that the prison admission rate is significantly higher than the population rate. Another noticable observation is New York, which clearly has some outliers- the criminal justice system within that state is known to have many issues, and over-policing might have contributed to those high numbers. It's alarming to see that in 2016, there were alarming prison admissions and population rise. 
+
+```{r echo = FALSE, warning=FALSE}
+prison_rate_prop_plot
+```
+
+
+### County Map
+With my initial focus on the Black prison statistics, I decided to create a map that compares the Black admission rates in the U.S. I used a new variable, `black_white_ratio` and highlighted the counties in which the prison admission rate is higher for Blacks than Whites. This map shows a clear distinction between the western and eastern states, which is the most interesting observation. There seems to be a pattern, in the South and Eastern states, in which the Black to White prison admission rate is much higher. 
+
+```{r echo = FALSE, warning=FALSE}
+prison_adm_map
 ```
 
